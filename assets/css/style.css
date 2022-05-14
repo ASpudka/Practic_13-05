@@ -33,10 +33,12 @@
    display: inline-block;
    padding-top: 10px;
    padding-bottom: 10px;
+   position: relative;
  }
  .list-link{
    display: block;
    padding: 1em 2em;
+  
    background-color: yellow;
 
    transition-property: background-color;
@@ -47,6 +49,31 @@
  .list-link:hover{
    background-color: green;
  }
+ .list-item::after, .list-item::before{
+content: '';
+display: block;
+width:0;
+height: 5px;
+
+background-color: yellow;
+transition-property: width;
+   transition-duration: 0.7s;
+   transition-timing-function: ease;
+   transition-delay: 0.2s;
+ }
+ .list-item::after{
+  position: absolute;
+  bottom: 3px; left 0px;
+}
+.list-item::before{
+  position: absolute;
+  top: 3px; right: 0px; 
+}
+ .list-item:hover:after,.list-item:hover::before{
+width: 100%;
+ }
+
+ 
  p::first-letter{
   background-color: yellow;
   text-transform: capitalize;
