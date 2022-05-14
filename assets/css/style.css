@@ -1,12 +1,31 @@
- h1{
+  p::first-letter{
+  background-color: yellow;
+  text-transform: capitalize;
+  text-shadow: -12px -11px 3px green;
+}
+
+h1{
    width: 200px;
    margin: auto;
+   position: relative;
    text-align: center;
+   
  }
  h1::after, h1::before{
    content: url(./../images/icons/flower-tulip.svg); display: inline-block;
   width: 30px;
   height: 30px;
   background-color: yellow;
+  position: absolute;
 
+ }
+ h1::after{
+right: 5px;
+ }
+ h1::before{
+left:5px;
+ }
+ p{
+   text-indent: 2em;
+   text-align: justify;
  }
