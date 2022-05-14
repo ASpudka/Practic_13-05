@@ -1,4 +1,53 @@
-  p::first-letter{
+ *{
+   box-sizing: border-box;
+ }
+ body{
+   height: 300vh;
+   margin: 0;
+ }
+ ul{
+   list-style: none;
+   padding: 0;
+   margin: 0;
+
+ }
+ a{
+   color: inherit;
+   text-decoration: none;
+ }
+ .page-header{
+   position: fixed;
+   left: 0; right: 0;
+   z-index: 1;
+   background-color: rgb(244, 247, 244);
+   box-shadow: 0 0 7px 1px green;
+ }
+ 
+ main{
+   padding-top: 5em;
+ }
+ .list{
+   text-align: center;
+ }
+ .list-item{
+   display: inline-block;
+   padding-top: 10px;
+   padding-bottom: 10px;
+ }
+ .list-link{
+   display: block;
+   padding: 1em 2em;
+   background-color: yellow;
+
+   transition-property: background-color;
+   transition-duration: 0.7s;
+   transition-timing-function: ease;
+   transition-delay: 0.2s;
+ }
+ .list-link:hover{
+   background-color: green;
+ }
+ p::first-letter{
   background-color: yellow;
   text-transform: capitalize;
   text-shadow: -12px -11px 3px green;
